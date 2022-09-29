@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Loops:</h1>
+    <p id="ifelse"></p>
+    <p  id="swwitch"></p>
+    <p id="for"></p>
+    <p id="while"></p>
+    <p id="demo"></p>
+
+    <script>
+        const  a=new Date().getHours();
+        let greeting;
+        if(a < 10){
+           greeting= "Good Morning";
+        }
+        else if(a < 20){
+            greeting= "Good day";
+        }else{
+            "Good night";
+        }
+        document.getElementById("ifelse").innerHTML="<p>if else:</p>"+greeting;
+
+        let day;
+       switch(new Date().getDay()){
+        case 0:
+            day = "Sunday";
+            break;
+        case 1:
+            day = "Monday";
+            break;
+        case 2:
+            day = "Tuesday";
+            break;
+        case 3:
+            day = "Wednesday";
+            break;
+        case 4:
+            day = "Thursday";
+            break;
+        case 5:
+            day = "Friday";
+            break;
+        case  6:
+            day = "Saturday";
+            }
+        document.getElementById("swwitch").innerHTML="Today is:"+day;    
+        
+        let b =  " ";
+        for(let i=0;i<5;i++){
+            b+= "The number is " + i + "<br>";
+        }    
+        document.getElementById("for").innerHTML=b;
+        
+        let c="";
+        j=0;
+        while (j<20) {
+            c+= "<br>The number is " + j;
+            j++;
+        }
+        document.getElementById("while").innerHTML= c;
+
+        let text = ""
+        let k = 0;
+        do {
+        text += "<br>The number is " + k;
+        k++;
+        }
+        while (k < 8);  
+        document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>
